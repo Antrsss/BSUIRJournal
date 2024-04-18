@@ -1,3 +1,6 @@
 package com.example.bsuirjournal.data
 
-data class UiState()
+data class UiState(
+    val group: String = "",
+    val pickupOptions: List<String> = listOf(),
+)

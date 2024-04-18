@@ -50,16 +50,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            var searchText = remember { mutableStateOf("") }
+            /*var searchText = remember { mutableStateOf("") }
             var isActive by rememberSaveable { mutableStateOf(false) }
             val groupList = remember {
                 mutableStateOf(Utils.originList)
             }
             val painter = painterResource(id = R.drawable.ic_list)
             val description = "Info"
-            val openGroupDialog = remember { mutableStateOf(false) }
+            val openGroupDialog = remember { mutableStateOf(false) }*/
             BSUIRJournalTheme {
-                SearchBar(
+                BSUIRJournalApp()
+                /*SearchBar(
                     modifier = Modifier
                         .fillMaxWidth()
                         .wrapContentHeight()
@@ -86,19 +87,19 @@ class MainActivity : ComponentActivity() {
                 }
                 if (openGroupDialog.value == true) {
                     OpenGroupDialog(openGroupDialog = openGroupDialog)
-                }
+                }*/
                 // A surface container using the 'background' color from the theme
-                Surface(
+                /*Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.onPrimary
                 ) {
-                }
+                }*/
             }
         }
     }
 }
 
-@Composable
+/*@Composable
 fun OpenGroupDialog(
     openGroupDialog: MutableState<Boolean>
 ) {
@@ -187,4 +188,4 @@ object Utils {
             it.startsWith(text)
         }
     }
-}
+}*/
