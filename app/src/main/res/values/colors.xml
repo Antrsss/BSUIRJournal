@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bsuir_main">#3a547f </color>
+    <color name="bsuir_light">#6786b8</color>
+    <color name="bsuir_gray">#DFE1F3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
