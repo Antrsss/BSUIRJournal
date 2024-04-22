@@ -1,4 +1,4 @@
-package com.example.bsuirjournal
+package com.example.bsuirjournal.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -24,12 +24,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.bsuirjournal.ui.SelectGroupScreen
 import com.example.bsuirjournal.ui.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.composable
+import com.example.bsuirjournal.R
 import com.example.bsuirjournal.data.DataSource
-import com.example.bsuirjournal.ui.MainScreen
+import com.example.marsphotos.ui.screens.GroupsViewModel
+import com.example.marsphotos.ui.screens.HomeScreen
 
 enum class BSUIRJournalScreen() {
     Start,
@@ -97,9 +98,8 @@ fun BSUIRJournalApp (
             }
             composable(route = BSUIRJournalScreen.Main.name) {
                 val context = LocalContext.current
-                MainScreen (
-                    modifier = Modifier.fillMaxHeight()
-                )
+                val groupsViewModel: GroupsViewModel = viewModel()
+                HomeScreen(groupsUiState = groupsViewModel.groupsUiState)
             }
         }
     }
